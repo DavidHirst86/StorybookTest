@@ -1,0 +1,8 @@
+<h1 color="success">{{ title }}</h1>
+<h2 color="danger">{{ subtitle }}</h2>
+
+<hr *ngIf="title || subtitle">
+
+<p>{{ content }}</p> <!-- gets content from ts file currently -->
+
+<ion-button (click)="handleBtnClick()">Click me!!!</ion-button>
