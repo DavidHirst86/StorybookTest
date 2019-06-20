@@ -1,0 +1,5 @@
+<p *ngIf="product.price > 700">
+  <ion-button color="danger" (click)="notify.emit()">Notify Me</ion-button>
+  <ion-button color="success" (click)="presentAlert()">Notify me with this much better Ionic alert</ion-button>
+  <!-- gets the notify from the product alert (or calls it depending on how you look at it)-->
+</p>

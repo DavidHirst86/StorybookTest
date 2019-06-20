@@ -1,0 +1,26 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+
+  <h3>
+    <a [title]="product.name + 'details'">
+      <!-- [title] is property binding In the preview pane, hover over the displayed product name to see the bound name property value. 
+        They are the same. Interpolation {{ }} lets you render the property value as text; property binding [ ] lets you use the property value in a template expression.
+-->
+      {{ product.name }}
+    </a>
+  </h3>
+  <!-- if instead of for so it only runs if it exists. -->
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <!-- Bind the button's click event to the share() event that we defined for you (in product-list.component.ts). Event binding is done by using ( ) around the event -->
+  <ion-button (click)="share()">
+    Share
+  </ion-button>
+
+  <!-- bind the app-product-alerts component (which is what displays the "Notify Me" button) to the onNotify() method of the product list component -->
+  <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+
+</div>

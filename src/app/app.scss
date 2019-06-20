@@ -4,3 +4,17 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+
+//it doesnt work unless its global?
+.alert-wrapper {
+    background: var(--ion-color-warning) !important;
+}
+
+.storyOfButtons {
+    background: var(--ion-color-primary) !important;
+    padding: 1em;
+    color: #fff;
+    min-width:10em;
+    width:10em;
+    margin:1em;
+}

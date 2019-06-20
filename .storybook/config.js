@@ -8,7 +8,7 @@ const req = require.context('../src/', true, /.stories.ts$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
-/*
+
 //in theory adds ionic support but it just breaks instead
 const wrap = templateFn => storyFn => {
   const story = storyFn();
@@ -30,7 +30,7 @@ addDecorator(
   })
 );
 addDecorator(ionicWrap);
- */
+
 configure(loadStories, module);
 
 //https://github.com/storybookjs/storybook/issues/2629 what this is:

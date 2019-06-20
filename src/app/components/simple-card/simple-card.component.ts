@@ -16,5 +16,6 @@ export class CardComponent {
 
   handleBtnClick() {
     this.btnClicked.emit(true);
+    console.log("button clicked")
   }
 }
